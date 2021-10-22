@@ -301,7 +301,7 @@ route.post("/sendmail", async (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
       to: email, // Change to your recipient
-      from: "sumitkosta07@gmail.com", // Change to your verified sender
+      from: `${process.env.EMAIL}`, // Change to your verified sender
       subject: "Admin Panel | Reset Password",
       text: "and easy to do anywhere, even with Node.js sumitkosta jar",
       html: `Your Varification Code For Reset Password is ${code} <br> Enter This code To Reset Password`,
@@ -358,7 +358,7 @@ route.post("/sendvarificationmail", async (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
       to: email, // Change to your recipient
-      from: "sumitkosta07@gmail.com", // Change to your verified sender
+      from: `${process.env.EMAIL}`, // Change to your verified sender
       subject: "Admin Panel | Reset Password",
       text: "and easy to do anywhere, even with Node.js sumitkosta jar",
       html: `Click To Verify your account <br> <a href="${process.env.HOST}:3000/verifymail/${token}" target="_blank">Click Here</a>`,
