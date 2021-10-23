@@ -17,7 +17,7 @@ config.env and create some environment variables
  PORT = Enter any port to run your server
 MONGO_URL = Your MONGO_DB Url 
 
-TOKEN_SECRET_KEY = Any secure key which will project your user password 
+TOKEN_SECRET_KEY = Any secure key which will protect your user password 
 
 SENDGRID_API_KEY = Go to sendgrid website and get your api key
 HOST = your client url ///  for localhost (http://localhost)
